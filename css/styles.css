@@ -1,7 +1,7 @@
 :root {
   --white-color: #fff;
   --hover: #2196f3;
-  --line-h1641: 1.17;
+  --line-h1641: 1rem;
   --color-text: #757575;
   --background: #2f303a;
   --filter-background: #f5f4fa;
@@ -25,15 +25,16 @@ body {
 h4 {
   font-size: 14px;
   font-weight: 700;
-  line-height: 16px;
   letter-spacing: 0.03em;
+  line-height: var(--line-h1641);
 }
 .container {
   display: flex;
-  width: 75vw;
-  padding-right: 15px;
   padding-left: 15px;
-  margin: 0 auto 0 auto;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 .global-header {
   display: flex;
@@ -44,10 +45,7 @@ h4 {
   align-items: center;
   height: 100%;
 }
-.logo-link {
-  width: 145px;
-  height: 31px;
-}
+
 .main-navigation ul {
   display: flex;
   width: 259px;
@@ -58,24 +56,23 @@ h4 {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  line-height: var(--line-h1641);
-  letter-spacing: 0.78px;
-  width: 145px;
-  margin: 0 auto;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
 }
 .web-logo {
   color: var(--hover);
   font-family: "Oleo Script", "cursive";
   font-weight: 400;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
 }
 .studio-logo-header {
   color: var(--studio-logo-color);
 }
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  height: inherit;
-  width: 100%;
+  display: none;
 }
 .main-navigation a {
   color: var(--default-color);
@@ -116,8 +113,6 @@ a.link-navigation.current {
   padding-left: 93px;
 }
 .contact-header {
-  display: flex;
-  gap: 40px;
   font-weight: 500;
   font-size: 14px;
   color: var(--color-text);
@@ -144,6 +139,15 @@ a.link-navigation.current {
 
 .contact-header .icon-header {
   --color: currentColor;
+}
+.menu-button svg {
+  width: 40px;
+  height: 40px;
+}
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .head {
@@ -174,7 +178,7 @@ a.link-navigation.current {
   text-align: center;
   color: var(--white-color);
   letter-spacing: 2.64px;
-  width: 696px;
+  max-width: 696px;
   height: 120px;
   z-index: 1;
 }
@@ -201,22 +205,19 @@ a.link-navigation.current {
   cursor: pointer;
   background-color: var(--request-hover-color);
 }
-.main-section {
-  padding-top: 94px;
-}
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .main-section-list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 30px;
-  font-size: 14px;
-  letter-spacing: 0.42px;
 }
 .main-section-list li {
-  width: 23.2%;
+  width: 100%;
 }
 .main-icon {
   display: flex;
@@ -228,21 +229,17 @@ a.link-navigation.current {
   margin-bottom: 30px;
   border-radius: 4px;
 }
-h4 {
-  font-size: 14px;
-}
+
 .what-we-do,
 .our-team,
 .regular-customers {
   flex-direction: column;
   align-items: center;
 }
-
 .what-we-do ul {
   display: flex;
   gap: 30px;
 }
-
 .what-we-do-img,
 .team-img {
   display: block;
@@ -266,13 +263,18 @@ h4 {
   color: var(--white-color);
 }
 .main-titles {
-  line-height: var(--line-h1641);
   margin: 0 0 10px 0;
+  text-align: center;
 }
 .main-text {
   color: var(--color-text);
-  line-height: 1.71;
   margin: 0;
+
+  font-size: 14px;
+
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: left;
 }
 .title-section {
   font-size: 36px;
@@ -285,6 +287,7 @@ h4 {
 }
 .team {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -346,7 +349,15 @@ h4 {
 }
 .customers {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 400px;
+  width: 100%;
   gap: 30px;
+}
+.customers li {
+  width: 46.6%;
 }
 
 .regular-customers-rectangular {
@@ -354,7 +365,6 @@ h4 {
   justify-content: center;
   align-items: center;
   color: var(--icon-color);
-  width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -371,12 +381,25 @@ h4 {
 .icon-customers {
   --color2: currentColor;
 }
-.first-part-footer {
-  margin-top: 60px;
-}
 .footer {
-  height: 251px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--background);
+}
+.footer .container {
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.first-part-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-part-footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 .studio-logo-footer {
   color: var(--white-color);
@@ -388,12 +411,9 @@ h4 {
   line-height: 1.17;
   letter-spacing: 0.42px;
   padding-top: 28px;
-  max-width: 231px;
+  text-align: center;
 }
-.adress p {
-  width: 207px;
-  margin: 0;
-}
+
 .contact-footer {
   display: flex;
   flex-direction: column;
@@ -417,22 +437,16 @@ h4 {
 .contact-footer a:active {
   color: var(--link-active);
 }
-.first-part-footer .logo-link {
-  display: block;
-}
-.social {
-  margin-top: 72px;
-  margin-left: 70px;
-}
+
 .social h4 {
   color: var(--white-color);
+  text-align: center;
   margin-bottom: 20px;
 }
 .social-media-webstudio {
   display: flex;
-}
-.social-media-webstudio li:nth-child(-n + 3) {
-  margin-right: 10px;
+  justify-content: center;
+  gap: 10px;
 }
 .circle-webstudio {
   display: flex;
@@ -455,25 +469,30 @@ h4 {
   background-color: var(--hover);
 }
 .subscribe {
-  width: 48.7%;
-  margin: 72px 0 93px 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 .subscribe form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  margin-top: 20px;
+  width: 100%;
 }
 .subscribe h4 {
   color: var(--white-color);
   text-transform: uppercase;
 }
 .subscribe input {
-  width: 62.8%;
   background-color: var(--background);
   color: var(--white-color);
   border: 1px solid #ffffff4d;
   border-radius: 4px;
   padding-left: 14px;
+  width: 100%;
+  height: 50px;
 }
 .subscribe input::placeholder {
   color: #ffffff99;
@@ -481,12 +500,9 @@ h4 {
 .subscribe button {
   display: flex;
   align-items: center;
-
   border-radius: 4px;
   padding: 13px 0 13px 43px;
-  margin-left: 2.1%;
   gap: 12.5%;
-
   box-shadow: 0px 4px 4px 0px #00000026;
 }
 .portofolio-section {
@@ -794,9 +810,146 @@ h4 {
   cursor: pointer;
   background-color: #188ce8;
 }
+/* Mobile 
+@media screen and (max-width: 480px) {
+  .container {
+    width: 428px;
+  }
+}*/
+
 /* Tablet */
 @media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .main-titles {
+    text-align: left;
+  }
+  .first-part-footer-social {
+    flex-direction: row;
+    gap: 165px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  /* .container {
+    width: 768px;
+  } */
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    width: 100%;
+  }
+  .contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .main-section-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 532px;
+  }
+  .main-section-list li {
+    width: 48%;
+    flex: 1 1 0;
+  }
+  .team {
+    flex-wrap: wrap;
+    height: 1114px;
+  }
+  .team-images {
+    width: 48%;
+    flex: 1 1 0;
+  }
+  .customers {
+    max-height: 280px;
+  }
+  .customers li {
+    width: 30.6%;
+  }
+}
+@media screen and (max-width: 1157px) {
+  .container {
+    width: 100%;
+  }
+  .what-we-do {
+    display: none;
+  }
+  .subscribe input {
+    width: 61%;
+  }
+  .subscribe form {
+    gap: 20px;
+  }
 }
 /* Desktop */
+
 @media screen and (min-width: 1158px) {
+  /* .container {
+    width: 1158px;
+  } */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    width: 100%;
+  }
+  .contact-header {
+    display: flex;
+    gap: 40px;
+  }
+  .main-section-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-section-list li {
+    width: 23.2%;
+  }
+  .what-we-do {
+    padding-bottom: 94px;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team {
+    flex-direction: row;
+  }
+  .customers {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .customers li {
+    width: 15%;
+  }
+  .footer .container {
+    flex-direction: row;
+  }
+  .logo-link {
+    height: 31px;
+  }
+  .subscribe {
+    width: 48.7%;
+    margin: 12px 0 33px 33px;
+    gap: 20px;
+  }
+  .subscribe form {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .first-part-footer-social {
+    align-items: baseline;
+    gap: 70px;
+  }
+  .subscribe input {
+    width: 62.8%;
+  }
 }

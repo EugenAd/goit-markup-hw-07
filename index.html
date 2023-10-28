@@ -64,11 +64,11 @@
           </div>
         </div>
       </div>
-      <!-- <div class="menu-button js-open-menu">
+      <div class="menu-button js-open-menu">
         <svg>
           <use href="./images/symbol-defs.svg#icon-menu"></use>
         </svg>
-      </div> -->
+      </div>
     </header>
     <main>
       <!--Main section-->
@@ -78,6 +78,7 @@
           Request our service
         </button>
       </section>
+      <section class="section">
       <div class="container main-section">
         <ul class="main-section-list">
           <li>
@@ -130,9 +131,9 @@
           </li>
         </ul>
       </div>
+      </section>
       <!--What we do section-->
-      <section class="section">
-        <div class="container what-we-do">
+              <div class="container what-we-do">
           <h2 class="title-section">What we do</h2>
           <ul>
             <li>
@@ -180,13 +181,34 @@
           <h2 class="title-section">Our Team</h2>
           <ul class="team">
             <li class="team-images">
-              <img
-                class="team-img"
-                src="./images/christopher-walker.jpg"
-                alt="Product Designer man named Christopher Walker"
-                width="270"
-                height="260"
+            
+              <picture>
+                <!-- Desktop -->
+              <source 
+                media="(min-width: 1158px)" 
+                srcset="
+                 ./images/christopher-walker_d.jpg 1x, 
+                 ./images/christopher-walker_d_2x.jpg 2x"
+                />
+                <!-- Tablet -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./images/christopher-walker_t.jpg 1x, 
+                  ./images/christopher-walker_t_2x.jpg 2x"
+                />
+                <!-- Mobile -->
+              <source
+                srcset="
+                  ./images/christopher-walker_m.jpg 1x, 
+                  ./images/christopher-walker_m_2x.jpg 2x"
               />
+                <img
+                src="./images/christopher-walker_d.jpg"
+                alt="Christopher Walker"
+                class="members-img"
+              />
+              </picture>
               <div class="members-label">
                 <div class="members-details">
                   <h3 class="team-members">Christopher Walker</h3>
@@ -225,13 +247,33 @@
               </div>
             </li>
             <li class="team-images">
-              <img
-                class="team-img"
-                src="./images/kylie-evans.jpg"
-                alt="Kylie Evans Frontend Developer blonde women named Kylie Evans"
-                width="270"
-                height="260"
+            <picture>
+                <!-- Desktop -->
+              <source 
+                media="(min-width: 1158px)" 
+                srcset="
+                 ./images/kylie-evans_d.jpg 1x,
+                 ./images/kylie-evans_d_2x.jpg 2x"
+                />
+                <!-- Tablet -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                 ./images/kylie-evans_t.jpg 1x,
+                 ./images/kylie-evans_t_2x.jpg 2x"
+                />
+                <!-- Mobile -->
+              <source
+                srcset="
+                  ./images/kylie-evans_m.jpg 1x,
+                  ./images/kylie-evans_m_2x.jpg 2x"
               />
+                <img
+                src="./images/kylie-evans_d.jpg"
+                alt="Kylie Evans"
+                class="members-img"
+              />
+              </picture>
               <div class="members-label">
                 <div class="members-details">
                   <h3 class="team-members">Kylie Evans</h3>
@@ -270,13 +312,33 @@
               </div>
             </li>
             <li class="team-images">
-              <img
-                class="team-img"
-                src="./images/ryan-harris.jpg"
-                alt="Marketing man named Ryan Harris"
-                width="270"
-                height="260"
+              <picture>
+                <!-- Desktop -->
+              <source 
+                media="(min-width: 1158px)" 
+                srcset="
+                ./images/ryan-harris_d.jpg 1x,
+                ./images/ryan-harris_d_2x.jpg 2x"
+                />
+                <!-- Tablet -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                ./images/ryan-harris_t.jpg 1x,
+                ./images/ryan-harris_t_2x.jpg 2x"
+                />
+                <!-- Mobile -->
+              <source
+                srcset="
+                  ./images/ryan-harris_m.jpg 1x,
+                  ./images/ryan-harris_m_2x.jpg 2x"
               />
+                <img
+                src="./images/ryan-harris_d.jpg"
+                alt="Ryan Harris"
+                class="members-img"
+              />
+              </picture>
               <div class="members-label">
                 <div class="members-details">
                   <h3 class="team-members">Ryan Harris</h3>
@@ -315,13 +377,33 @@
               </div>
             </li>
             <li class="team-images">
-              <img
-                class="team-img"
-                src="./images/tyler-moore.jpg"
-                alt="UI Designer man named Tyler Moore"
-                width="270"
-                height="260"
+                      <picture>
+                <!-- Desktop -->
+              <source 
+                media="(min-width: 1158px)" 
+                srcset="
+                ./images/tyler-moore_d.jpg 1x,
+                ./images/tyler-moore_d_2x.jpg 2x"
+                />
+                <!-- Tablet -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                ./images/tyler-moore_t.jpg 1x,
+                ./images/tyler-moore_t_2x.jpg 2x"
+                />
+                <!-- Mobile -->
+              <source
+                srcset="
+                  ./images/tyler-moore_m.jpg 1x,
+                  ./images/tyler-moore_m_2x.jpg 2x"
               />
+                <img
+                src="./images/tyler-moore_d.jpg"
+                alt="Tyler Moore"
+                               class="members-img"
+              />
+              </picture>
               <div class="members-label">
                 <div class="members-details">
                   <h3 class="team-members">Tyler Moore</h3>
@@ -431,8 +513,9 @@
     <!-- Footer section -->
     <footer class="footer">
       <div class="container">
+        <div class="first-part-footer-social">
         <div class="first-part-footer">
-          <a class="logo-link" href="./index.html">
+                  <a class="logo-link" href="./index.html">
             <h2 class="logo">
               <span class="web-logo">Web</span
               ><span class="studio-logo-footer">Studio </span>
@@ -445,8 +528,8 @@
               <a href="tel:+1212-772-4150">+1 212-772-4150</a>
             </div>
           </address>
-        </div>
-        <div class="social">
+          </div>
+                <div class="social">
           <h4>FIND US ON</h4>
           <ul class="social-media-webstudio">
             <li>
@@ -486,6 +569,7 @@
               </a>
             </li>
           </ul>
+        </div>
         </div>
         <div class="subscribe">
           <h4>Subscribe to the newsletter</h4>
